@@ -1,0 +1,302 @@
+/* All Common css Start*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+ol {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  line-height: 0.8;
+}
+body {
+  font-family: "DM Sans", sans-serif;
+}
+/* All Common css End*/
+
+/* Header Part Start  */
+.main_header {
+  background-color: #f7f1fc;
+}
+.logo_Menu_icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+/* logo Part  */
+.logo {
+  cursor: pointer;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 15px 0;
+}
+.logo_text {
+  font-size: 30px;
+  font-weight: 600;
+}
+/* navBar */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+  align-items: center;
+  position: relative;
+}
+.nav li {
+  color: #031f42;
+  cursor: pointer;
+  display: flex;
+  gap: 0 5px;
+  align-items: center;
+  font-weight: 600;
+  padding: 20px 0;
+}
+.nav li:hover {
+  color: #b68c5a;
+}
+.nav li i {
+  transition: 0.6s ease;
+  margin-right: 12px;
+}
+.nav li:hover i {
+  transform: rotate(360deg);
+}
+/* home hover  */
+
+.hover_div {
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  flex-wrap: wrap;
+  transition: all 0.6s ease;
+  padding: 20px;
+  top: 60px;
+  transition: opacity 0.8s ease-in-out, visibility 0.8s ease;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-wrap: wrap;
+  background: teal;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 1000px;
+  cursor: default;
+}
+.nav .menu_item1:hover .hover_div{
+  visibility: visible;
+  opacity: 1;
+}
+
+.home_button1, .home_button2{
+    width: 150px;
+    height: 45px;
+    border-radius: 10px;
+    background: #b68c5a;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 3px;
+}
+/* Card Design */
+.home_card1{
+    width: 250px;
+    height: 350px;
+    background: red;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.home_card1:hover{
+    background: rgba(0, 0, 0, 0.438);
+}
+
+/* About us */
+.hover_div2 {
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  flex-wrap: wrap;
+  transition: all 0.6s ease;
+  padding: 20px;
+  top: 100%;
+  flex-wrap: wrap;
+  background: teal;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  gap: 10px;
+}
+.nav .menu_item2:hover .hover_div2 {
+  visibility: visible;
+  opacity: 1;
+
+}
+/* Service  */
+ .hover_Services {
+  display: none;
+  position: absolute;
+  flex-wrap: wrap;
+  transition: all 0.6s ease;
+  padding: 20px;
+  top: 100%;
+  flex-wrap: wrap;
+  background: teal;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  gap: 10px;
+}
+.nav .menu_item3:hover .hover_Services {
+  display: block;
+}
+
+/* Services */
+
+.hover_Projects {
+    display: none;
+    position: absolute;
+    flex-wrap: wrap;
+    transition: all 0.6s ease;
+    padding: 20px;
+    top: 100%;
+    flex-wrap: wrap;
+    background: teal;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    gap: 10px;
+  }
+.nav .menu_item4:hover .hover_Projects{
+    display: block;
+}
+/*  Blog  */
+.hover_blog {
+    display: none;
+    position: absolute;
+    flex-wrap: wrap;
+    transition: all 0.6s ease;
+    padding: 20px;
+    top: 100%;
+    flex-wrap: wrap;
+    background: teal;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    gap: 10px;
+  }
+.nav .menu_item5:hover .hover_blog{
+    display: block;
+}
+
+/* icons part  */
+.number-icon {
+  display: flex;
+  align-items: center;
+  gap: 0 40px;
+}
+.number-icon:hover {
+  color: #b68c5a;
+}
+.phone-link {
+  color: #031f42;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.phone-link:hover {
+  color: #b68c5a;
+}
+.phone-link i {
+  color: #573db8;
+}
+/* button  */
+.post-for-button {
+  width: 51px;
+  height: 51px;
+  border-radius: 50%;
+  background-color: #573db8;
+  border: none;
+  cursor: pointer;
+}
+.post-for-button:hover {
+  background-color: #b68c5a;
+}
+.post-for-button i {
+  color: white;
+  width: 20px;
+  height: 7px;
+}
+/* Banner Part Start   */
+.First-Heading {
+  font-weight: 200;
+  font-size: 84px;
+  text-align: center;
+  width: 993px;
+  margin: 0 auto;
+  padding-top: 59px;
+}
+.bold-text {
+  font-weight: 600;
+}
+.green_bg {
+  width: 412px;
+  height: 412px;
+  position: relative;
+}
+
+.green_bg::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: radial-gradient(
+    circle,
+    rgba(143, 212, 95, 0.27) 0%,
+    rgba(143, 212, 95, 0) 70%
+  );
+  border-radius: 50%;
+  top: -40%;
+  left: 0%;
+  position: absolute;
+}
+
+.green_bg::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -2;
+  background: radial-gradient(
+    circle,
+    rgba(88, 61, 184, 0.27) 0%,
+    rgba(88, 61, 184, 0) 70%
+  );
+  border-radius: 50%;
+  right: -10px;
+  bottom: 65px;
+}
+
+/* Banner Part End   */
