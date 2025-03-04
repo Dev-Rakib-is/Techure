@@ -1,7 +1,7 @@
 //Sticky  Header
 window.addEventListener("scroll", function () {
     let nav = this.document.querySelector("#main_header")
-    if (window.scrollY > 300) {
+    if (window.scrollY > 500) {
         nav.classList.add("fixed_header")
     }
     else{
@@ -35,6 +35,66 @@ function toggleVideo(){
     isPlaying = !isPlaying;
 }
 
+// counter Part Start
+const counters = document.querySelectorAll(".counter");
+let isCounterStarted = false;
+
+// function formetNumber(num) {
+//     if (num >= 1000000) {
+//        return(nom / 1000000).toFixed(1)+"m+"
+//     }
+//     else if(num >= 1000 ){
+//         return(num / 1000).toFixed(1)+"k+"
+//     }
+//     else{
+//         num + '+'
+//     }
+// }
+
+function startCounter() {
+    if (isCounterStarted) return;
+    isCounterStarted = true;
+
+    counters.forEach(counter => {
+        let target = +counter.getAttribute("data-target"); 
+        let count = 0;
+        let speed = target / 100;
+
+        function updateCount() {
+            if (count < target) {
+                count += speed;
+                counter.innerText = Math.floor(count) + "+"; 
+                requestAnimationFrame(updateCount);
+            } else {
+                counter.innerText = target + "+"; 
+            }
+        }
+
+        counter.style.opacity = "1";
+        counter.style.transform = "translateY(0)"; 
+        updateCount();
+    });
+}
+window.addEventListener("scroll", ()=>{
+    let counterSection = document.querySelectorAll("counterBg");
+    let position = counterSection.getBoundingClientRect().top
+    let screenHeight = window.innerHeight
+    
+
+    if (position < screenHeight - 100 || position > screenHeight + 100) {
+        startCounter()
+    }
+})
+window.addEventListener("load", startCounter);
+
+
+
+
+// counter Part End
+
+
+
+// -------------------------------------------------------
 // .................Back To Top Button
 window.onscroll = function (){
 let button = document.querySelector(".back_to_top");
@@ -53,4 +113,7 @@ function scrolToTop (){
 }
 // Back to top Button End 
 // -------------------------------------------
-// Counter Part
+
+
+
+
